@@ -1,0 +1,99 @@
+.familyBox {
+  width: 100%;
+  border-spacing: 20px;
+}
+.MarginTop10 {
+  margin-top: 10px;
+}
+.familOneBox {
+  width: 100%;
+  margin: 0 0 10px 0;
+}
+.familOne {
+  display: block;
+  width: 200px;
+  position: relative;
+}
+.familBlock {
+  border: 1px solid #808080;
+  border-radius: 5px;
+  padding: 5px;
+  vertical-align: top !important;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.1s ease-in-out;
+}
+.familBlockInner {
+  width: calc(100% - 10px);
+}
+.familBlockLine {
+  width: 100%;
+}
+.FontRed {
+  color: red;
+  font-weight: bold;
+}
+.familBlockLineTxt {
+  font-size: 14px;
+}
+.familOne:not(:first-child)::after {
+  left: -55px;
+  top: -30px;
+  pointer-events: none;
+}
+.familOne:not(:first-child)::after {
+  border-left: 1px solid #808080;
+  border-bottom: 1px solid #808080;
+  position: absolute;
+  content: "";
+  display: block;
+  border-radius: 0 0 0 5px;
+  width: 55px;
+  height: 55px;
+  pointer-events: none;
+}
+.familyTable::after {
+  left: -35px;
+  top: -10px;
+  pointer-events: none;
+}
+.familyTable::after {
+  border-left: 1px solid #808080;
+  border-bottom: 1px solid #808080;
+  position: absolute;
+  content: "";
+  display: block;
+  border-radius: 0 0 0 5px;
+  width: 55px;
+  height: 55px;
+  pointer-events: none;
+}
+.familyTable {
+  position: relative;
+}
+.familBlockLine {
+  width: 100%;
+}
+.familBlock {
+  color: blue;
+  border: 1px solid #808080;
+  border-radius: 5px;
+  padding: 5px;
+  vertical-align: top !important;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.1s ease-in-out;
+}
+.familBlockLineTit,
+.familBlockLineTxt {
+  display: block;
+  display: inline-block;
+  word-break: break-all;
+}
+.Table {
+  display: table;
+}
+.Table > div > div > a {
+  display: table-cell;
+  vertical-align: middle;
+}

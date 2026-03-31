@@ -1,0 +1,35 @@
+import { Role } from "./Role";
+import { UserRateLimit } from "./UserRateLimit";
+
+export type User = {
+  id?: number;
+  role_id?: number;
+  role?: Role;
+  userRateLimits?: UserRateLimit[];
+  account?: string;
+  login_id?: string;
+  login_account?: string;
+  dev_account?: string;
+  creator_account?: string;
+  level?: number;
+  name?: string;
+  nick_name?: string;
+  password?: string;
+  login_password?: string;
+  state?: string;
+  locking?: string;
+  balance?: number;
+  total_balance?: number;
+  bonus_type?: string;
+  bonus_rate?: number;
+  display_bonus?: boolean;
+  share_type?: boolean;
+  share_rate?: number;
+  permission?: string;
+  day_limit?: number;
+  is_subaccount?: boolean;
+  createdAt?: Date;
+  updatedAt?: Date;
+  new_flg?: boolean;
+  edit_flg?: boolean;
+};
