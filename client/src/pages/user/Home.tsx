@@ -439,14 +439,24 @@ const Home = () => {
 
                 <div className="flex flex-col items-center gap-1 overflow-hidden w-full">
                   <div className="flex items-center text-sm text-yellow-200 bg-gray-900 rounded-xl w-full py-1 px-3 gap-2 overflow-hidden">
-                    <Icon icon="ph:user-circle-fill" width="30" className="shrink-0" />
+                    <Icon
+                      icon="ph:user-circle-fill"
+                      width="30"
+                      className="shrink-0"
+                    />
                     <span className="text-2xl truncate min-w-0">
                       {user?.account}
                     </span>
                   </div>
                   <div className="flex items-center text-sm text-yellow-200 bg-gray-900 rounded-xl w-full py-1 px-3 gap-2 overflow-hidden">
-                    <Icon icon="pepicons-pop:yen-circle-filled" width="26" className="shrink-0" />
-                    <span className="text-2xl truncate min-w-0">{user?.balance}</span>
+                    <Icon
+                      icon="pepicons-pop:yen-circle-filled"
+                      width="26"
+                      className="shrink-0"
+                    />
+                    <span className="text-2xl truncate min-w-0">
+                      {user?.balance}
+                    </span>
                   </div>
                 </div>
                 <div className="flex flex-col items-end me-3 gap-1 text-lg text-yellow-200">
@@ -600,7 +610,7 @@ const Home = () => {
                       {homeCameraUrls.length > 1 && (
                         <button
                           onClick={handleSwapCamera}
-                          className="absolute bottom-0 left-0 text-yellow-400 px-3 py-1 bg-[#2c1f16] rounded-tr-lg cursor-pointer"
+                          className="absolute bottom-0 left-0 text-yellow-400 px-3 py-1 bg-primary rounded-tr-lg cursor-pointer"
                         >
                           <Icon icon="tdesign:swap" width="24" height="24" />
                         </button>
@@ -608,8 +618,8 @@ const Home = () => {
                     </div>
                     <div className="rounded-lg overflow-hidden border border-white/10 shadow-lg">
                       <img
-                        src="/images/kinpo.png"
-                        alt="kinpo"
+                        src="/images/goose.png"
+                        alt="golden goose"
                         className="w-full object-contain"
                       />
                     </div>

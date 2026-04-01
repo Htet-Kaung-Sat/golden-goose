@@ -80,19 +80,14 @@ const Login = () => {
   };
 
   return (
-    <div
-      className="min-h-screen flex flex-col items-center justify-center bg-cover bg-center relative text-white"
-      style={{
-        backgroundImage: "url('/images/casino_bg.jpg')",
-      }}
-    >
-      <div className="absolute inset-0 bg-black/5 backdrop-blur-sm"></div>
+    <div className="min-h-screen flex flex-col items-center justify-center bg-[url('/images/goose.png')] bg-cover bg-center relative text-white">
+      <div className="absolute inset-0 bg-green-400/10 backdrop-blur-sm" />
 
-      <div className="relative flex flex-col gap-6 md:gap-5 lg:gap-2 z-10 w-full max-w-lg text-center">
+      <div className="relative flex flex-col gap-4 md:gap-5 lg:gap-2 z-10 w-full max-w-lg text-center">
         <img
           src="/images/logo.png"
           alt="Logo"
-          className="w-40 mx-auto mb-4 rounded-full"
+          className="w-48 mx-auto mb-4 rounded-full"
         />
 
         <div className="mb-8 relative w-fit mx-auto">
@@ -106,10 +101,10 @@ const Login = () => {
                bg-clip-text 
                text-transparent"
           >
-            新金宝
+            新金鹅
           </TypographyH1>
           <span className="text-xs md:text-sm text-gray-200 block absolute top-2 lg:top-4 -right-24 md:-right-28 whitespace-nowrap">
-            PC Version 2.64-W
+            PC Version 1.00-W
           </span>
         </div>
 
@@ -123,7 +118,7 @@ const Login = () => {
                 value={account}
                 onChange={(e) => setAccount(e.target.value)}
                 required
-                className="pl-10 bg-white/10 border border-yellow-500 text-white placeholder:text-gray-300"
+                className="pl-10 py-5 bg-white/10 border border-yellow-500 text-white placeholder:text-gray-300"
               />
               <Icons.user className="absolute left-3 top-1/2 -translate-y-1/2 text-yellow-400" />
             </div>
@@ -138,7 +133,7 @@ const Login = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
-                className="pl-10 pr-10 bg-white/10 border border-yellow-500 text-white placeholder:text-gray-300"
+                className="pl-10 pr-10 py-5 bg-white/10 border border-yellow-500 text-white placeholder:text-gray-300"
               />
               <Icons.lock className="absolute left-3 top-1/2 -translate-y-1/2 text-yellow-400" />
               <button
@@ -216,14 +211,14 @@ const Login = () => {
             type="submit"
             className={cn(
               "w-full mt-4 bg-gradient-to-b from-yellow-400 to-yellow-700 hover:from-yellow-500",
-              "hover:to-yellow-800 text-black font-bold py-2 text-lg rounded-md shadow-lg",
+              "hover:to-yellow-800 text-primary font-bold py-6 text-2xl rounded-md shadow-lg",
             )}
           >
             登录
           </Button>
         </form>
 
-        <div className="text-center mt-10 text-lg md:text-2xl">
+        <div className="text-center mt-4 md:mt-10 text-lg md:text-2xl">
           <span
             onClick={() => {
               const url = import.meta.env.VITE_CUSTOMER_SERVICE_URL;
@@ -235,7 +230,7 @@ const Login = () => {
           </span>
           <br />
           <span className="block mt-1 text-lg md:text-2xl">
-            Copyright © 2023–2035
+            Copyright © 2026–2036
           </span>
         </div>
       </div>

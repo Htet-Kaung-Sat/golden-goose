@@ -189,14 +189,20 @@ const UserSearch = () => {
         const lockingValue = row.original.locking;
         if (stateValue === "suspension") {
           return (
-            <p className="font-red font-medium">{t("common_suspension")}</p>
+            <p className="text-red-500 font-medium">{t("common_suspension")}</p>
           );
         } else if (stateValue === "freeze") {
-          return <p className="font-red font-medium">{t("common_freeze")}</p>;
+          return (
+            <p className="text-red-500 font-medium">{t("common_freeze")}</p>
+          );
         } else if (lockingValue === "locking") {
-          return <p className="font-red font-medium">{t("common_locking")}</p>;
+          return (
+            <p className="text-red-500 font-medium">{t("common_locking")}</p>
+          );
         } else {
-          return <p className="font-green font-medium">{t("common_normal")}</p>;
+          return (
+            <p className="text-emerald-500 font-medium">{t("common_normal")}</p>
+          );
         }
       },
     },

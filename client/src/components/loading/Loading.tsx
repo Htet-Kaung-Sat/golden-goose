@@ -43,18 +43,19 @@ export const Loading: React.FC<LoadingProps> = ({ loadingStep }) => {
   };
 
   return (
-    <div className="min-h-screen w-full bg-[url('/images/kinpo.png')] flex items-center justify-center bg-cover bg-center relative text-white bg-no-repeat">
-      <div className="text-white text-4xl">
+    <div className="min-h-screen w-full bg-[url('/images/goose.png')] flex items-center justify-center bg-cover bg-center relative text-white bg-no-repeat">
+      <div className="absolute inset-0 bg-green-400/5 backdrop-blur-sm" />
+      <div className="text-white w-full max-w-[90%] md:max-w-lg lg:max-w-2xl mx-auto text-xl md:text-3xl lg:text-4xl relative z-10">
         {steps.map((step, index) => {
           // const isLoading = loadingStep === step;
           const isDone = currentStepIndex > index || loadingStep === "done";
           return (
             <div
               key={step}
-              className="mb-2 px-2 shadow-md bg-black/30 bg-opacity-50 min-w-lg flex items-center justify-between"
+              className="mb-2 md:mb-3 px-3 md:px-4 py-2 md:py-3 shadow-md bg-black/30 w-full flex items-center justify-between rounded-md backdrop-blur-sm"
             >
               <p>{getLoadingStep(step)}</p>
-              <div className=" text-right">{isDone ? "OK" : "...载入中"}</div>
+              <div className="text-right">{isDone ? "OK" : "...载入中"}</div>
             </div>
           );
         })}

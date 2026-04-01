@@ -110,7 +110,7 @@ const DailyReport = () => {
       cell: ({ getValue }) => {
         const data = getValue() as number;
         return (
-          <span className={data < 0 ? "font-red" : ""}>
+          <span className={data < 0 ? "text-red-500" : ""}>
             {data ? parseFloat(Number(data).toFixed(3)).toString() : 0}
           </span>
         );
@@ -130,7 +130,7 @@ const DailyReport = () => {
       cell: ({ getValue }) => {
         const data = getValue() as number;
         return (
-          <span className={data < 0 ? "font-red" : ""}>
+          <span className={data < 0 ? "text-red-500" : ""}>
             {data ? parseFloat(Number(data).toFixed(3)).toString() : 0}
           </span>
         );

@@ -430,12 +430,12 @@ const CodeLookup = () => {
         const deskName = row.original.desk_name;
         if (deskName === "G20") {
           const transformed = `${betName.charAt(2)}-${betName.substring(0, 2)}`;
-          return <span className="font-green">{transformed}</span>;
+          return <span className="text-emerald-500">{transformed}</span>;
         }
         if (betName === "超6") {
-          return <span className="font-green">超级6</span>;
+          return <span className="text-emerald-500">超级6</span>;
         }
-        return <span className="font-green">{betName}</span>;
+        return <span className="text-emerald-500">{betName}</span>;
       },
     },
     { accessorKey: "betting_amount", header: t("cl_bet_amount"), size: 100 },
@@ -464,7 +464,9 @@ const CodeLookup = () => {
       cell: ({ getValue }) => {
         const data = getValue() as number;
         return (
-          <span className={data < 0 ? "font-red" : ""}>{data ? data : 0}</span>
+          <span className={data < 0 ? "text-red-500" : ""}>
+            {data ? data : 0}
+          </span>
         );
       },
     },
@@ -510,7 +512,7 @@ const CodeLookup = () => {
           return <React.Fragment key={index}>{itemText}</React.Fragment>;
         });
 
-        return <span className="font-red">{formattedElements}</span>;
+        return <span className="text-red-500">{formattedElements}</span>;
       },
     },
     {
@@ -520,7 +522,7 @@ const CodeLookup = () => {
       cell: ({ row }) => {
         const settle_flg = row.original.bet_state;
         return (
-          <span className={!row.original.win_loss_result ? "font-red" : ""}>
+          <span className={!row.original.win_loss_result ? "text-red-500" : ""}>
             {!settle_flg || row.original.win_loss_result === null
               ? ""
               : row.original.win_loss_result
@@ -605,7 +607,9 @@ const CodeLookup = () => {
       cell: ({ getValue }) => {
         const data = getValue() as number;
         return (
-          <span className={data < 0 ? "font-red" : ""}>{data ? data : 0}</span>
+          <span className={data < 0 ? "text-red-500" : ""}>
+            {data ? data : 0}
+          </span>
         );
       },
     },

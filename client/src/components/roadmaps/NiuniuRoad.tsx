@@ -55,7 +55,7 @@ const NiuNiuRoad: React.FC<NiuNiuRoadProps> = ({
               <div
                 className={cn(
                   "flex items-center justify-center bg-white font-bold aspect-square text-2xl",
-                  rowIndex === 0 ? "text-red-500" : "text-[#01fae6]"
+                  rowIndex === 0 ? "text-red-500" : "text-[#01fae6]",
                 )}
               >
                 {label}
@@ -68,7 +68,7 @@ const NiuNiuRoad: React.FC<NiuNiuRoadProps> = ({
 
                 const emptyCount = Math.max(
                   0,
-                  numOfCol - currentResults.length
+                  numOfCol - currentResults.length,
                 );
                 const filledResults = [
                   ...currentResults,
@@ -114,7 +114,7 @@ const NiuNiuRoad: React.FC<NiuNiuRoadProps> = ({
                         <div
                           className={cn(
                             "flex items-center justify-center rounded-full text-white font-bold transition-all w-10 h-10 text-xl",
-                            circleColor
+                            circleColor,
                           )}
                         >
                           {value}

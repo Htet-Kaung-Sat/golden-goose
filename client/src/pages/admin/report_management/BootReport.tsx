@@ -228,7 +228,9 @@ const BootReport = () => {
       cell: ({ getValue }) => {
         const data = getValue() as number;
         return (
-          <span className={data < 0 ? "font-red" : ""}>{data ? data : 0}</span>
+          <span className={data < 0 ? "text-red-500" : ""}>
+            {data ? data : 0}
+          </span>
         );
       },
     },
