@@ -55,8 +55,8 @@ const GamePlayerRightSideDesks = ({
       <div
         className={cn(
           "fixed top-0 right-0 h-full w-[600px] z-50",
-          "bg-gradient-to-b from-[#3a2a1b] to-[#1f150d]",
-          "border-l border-yellow-600/30",
+          "bg-green-900",
+          "border-l border-yellow-500",
           "transition-transform duration-300 ease-out",
           "flex flex-col",
           showDeskPanel ? "translate-x-0" : "translate-x-full",
@@ -70,11 +70,11 @@ const GamePlayerRightSideDesks = ({
           }}
           className={cn(
             "absolute top-1/2 -left-12 -translate-y-1/2 w-12 h-36",
-            "bg-[#3a2a1b] border border-yellow-600/40 border-r-0",
+            "bg-primary border border-yellow-600/40 border-r-0",
             "rounded-none rounded-l-4xl px-6",
             "text-yellow-300",
             "hover:shadow-[0_0_14px_rgba(210,155,36,0.4)]",
-            "flex items-center justify-center cursor-pointer",
+            "flex items-center justify-center cursor-pointer border-l-2 border-yellow-500",
           )}
         >
           <span className="-rotate-90 text-3xl hover:scale-105 transition-transform duration-300 tracking-wide whitespace-nowrap">
@@ -97,7 +97,7 @@ const GamePlayerRightSideDesks = ({
         </div>
 
         {/* Footer Filter - filter buttons for desk types, equal width buttons */}
-        <div className="flex gap-3 p-6 border-t border-yellow-600/30 bg-[#2a1c12]">
+        <div className="flex gap-3 p-6 border-t border-yellow-600/30 bg-primary">
           <Button
             onClick={() => setDeskFilter("ALL")}
             variant={deskFilter === "ALL" ? "default" : "secondary"}

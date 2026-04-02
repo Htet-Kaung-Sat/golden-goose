@@ -9,7 +9,12 @@ interface CalculatorProps {
   imgClassName?: string;
 }
 
-const Calculator: React.FC<CalculatorProps> = ({ amount, setAmount, className, imgClassName }) => {
+const Calculator: React.FC<CalculatorProps> = ({
+  amount,
+  setAmount,
+  className,
+  imgClassName,
+}) => {
   const [showKeypad, setShowKeypad] = useState(false);
 
   const handleKeyPress = (key: string) => {

@@ -224,15 +224,15 @@ const ReportDialog: React.FC<ReportDialogProps> = ({ open, onClose }) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70">
-      <div className="relative flex flex-col w-2/3 h-[855px] bg-[#3b2a1f] rounded-lg overflow-hidden border border-yellow-600/30">
-        <div className="flex shrink-0 bg-[#5a3f2a] text-white text-2xl">
+      <div className="relative flex flex-col w-2/3 h-[855px] bg-primary rounded-lg overflow-hidden border border-yellow-600/30">
+        <div className="flex shrink-0 bg-green-700 text-white text-2xl">
           {REPORT_TABS.map((tab) => (
             <div
               key={tab.key}
               onClick={() => setActiveTab(tab.key)}
               className={`px-8 py-4 cursor-pointer transition ${
                 activeTab === tab.key
-                  ? "bg-[#7a5535] border-b-4 border-yellow-400"
+                  ? "bg-[#b6aea7] border-b-4 border-yellow-400"
                   : "opacity-70 hover:opacity-100"
               }`}
             >
@@ -256,7 +256,7 @@ const ReportDialog: React.FC<ReportDialogProps> = ({ open, onClose }) => {
           <div className="flex shrink-0 gap-5 px-8 py-5 text-white text-xl">
             <Label>时间</Label>
             <Select value={filter} onValueChange={handleFilterChange}>
-              <SelectTrigger className="w-[180px] bg-[#7a5535] border-none text-white text-2xl px-6 py-3 rounded-md">
+              <SelectTrigger className="w-[180px] bg-[#efebe7] border-none text-black text-2xl px-6 py-3 rounded-md">
                 <SelectValue placeholder="今日报表" />
               </SelectTrigger>
               <SelectContent>
@@ -276,14 +276,14 @@ const ReportDialog: React.FC<ReportDialogProps> = ({ open, onClose }) => {
 
         {activeTab === "bet" && (
           <div className="flex flex-col flex-1 overflow-hidden">
-            <div className="grid shrink-0 grid-cols-5 bg-[#6a4a33] text-white text-xl px-8 py-4 border-b border-yellow-600/20">
+            <div className="grid shrink-0 grid-cols-5 bg-gray-500 text-white text-xl px-8 py-4 border-b border-yellow-600/20">
               <div className="text-left">日期</div>
               <div className="text-center">总投注 / 有效</div>
               <div className="text-center">输赢</div>
               <div className="text-center">佣金 / 洗码额</div>
               <div className="text-center">总输赢</div>
             </div>
-            <div className="flex-1 bg-[#2c1f16] overflow-y-auto px-8 custom-scrollbar">
+            <div className="flex-1 bg-primary overflow-y-auto px-8 custom-scrollbar">
               {betResults.length > 0 ? (
                 betResults.map((row, index) => (
                   <div
@@ -323,13 +323,13 @@ const ReportDialog: React.FC<ReportDialogProps> = ({ open, onClose }) => {
 
         {activeTab === "transaction" && (
           <div className="flex flex-col flex-1 overflow-hidden">
-            <div className="grid shrink-0 grid-cols-[60px_2fr_1fr_1.5fr] bg-[#1a110a] text-[#b09b8a] text-xl px-8 py-4 border-b border-yellow-900/50">
+            <div className="grid shrink-0 grid-cols-[60px_2fr_1fr_1.5fr] bg-gray-500 text-white text-xl px-8 py-4 border-b border-yellow-900/50">
               <div className="text-center">类型</div>
               <div className="text-center">操作时间</div>
               <div className="text-center">金额/余额</div>
               <div className="text-center">备注/单号</div>
             </div>
-            <div className="flex-1 bg-[#2c1f16] overflow-y-auto custom-scrollbar">
+            <div className="flex-1 bg-primary overflow-y-auto custom-scrollbar">
               {transactions.length > 0 ? (
                 transactions.map((row, i) => {
                   const [date, time] = new Date(row.createdAt)
@@ -403,7 +403,7 @@ const ReportDialog: React.FC<ReportDialogProps> = ({ open, onClose }) => {
                 </div>
               )}
             </div>
-            <div className="bg-[#1a110a] shrink-0 px-8 py-4 flex items-center justify-between text-2xl border-t border-yellow-900/50">
+            <div className="bg-gray-500 shrink-0 px-8 py-4 flex items-center justify-between text-2xl border-t border-yellow-900/50">
               <div className="flex items-center gap-6">
                 <button
                   onClick={() =>
@@ -635,7 +635,7 @@ const BetDetailPopup = ({
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
-      <div className="w-full max-w-6xl bg-[#2c1f16] rounded-xl border border-yellow-900/50 overflow-hidden shadow-2xl flex flex-col h-[700px]">
+      <div className="w-full max-w-6xl bg-primary rounded-xl border border-yellow-900/50 overflow-hidden shadow-2xl flex flex-col h-[700px]">
         <div className="relative bg-[#513a29] py-5 text-center border-b border-yellow-700/30">
           <h2 className="text-white text-4xl font-bold tracking-[0.2em]">
             下注纪录
@@ -654,7 +654,7 @@ const BetDetailPopup = ({
           <div className="text-center">派彩/下注</div>
           <div className="text-center">余额/状态</div>
         </div>
-        <div className="flex-1 overflow-auto bg-[#2c1f16]">
+        <div className="flex-1 overflow-auto bg-primary">
           {data.length > 0 ? (
             data.map((item, i) => {
               const isCancelled = item.cancel_flg === 1;

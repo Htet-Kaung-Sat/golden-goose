@@ -48,8 +48,7 @@ const GamePlayer: React.FC<GamePlayerProps> = ({
   const [openRateLimitInternal, setOpenRateLimitInternal] = useState(false);
   const openRateLimit =
     openRateLimitProp !== undefined ? openRateLimitProp : openRateLimitInternal;
-  const setOpenRateLimit =
-    setOpenRateLimitProp ?? setOpenRateLimitInternal;
+  const setOpenRateLimit = setOpenRateLimitProp ?? setOpenRateLimitInternal;
   const [cameraIndex, setCameraIndex] = useState(0);
   const { status, setStatus, setStatusDeskId, betBalance, user, refreshKey } =
     useGameContext();
@@ -168,7 +167,7 @@ const GamePlayer: React.FC<GamePlayerProps> = ({
             openRateLimit ? "z-[60]" : "z-40",
           )}
         >
-          <div className="flex gap-2 px-2 py-1 bg-gradient-to-b from-[#8b5e34]/90 to-[#4a362a]/70 rounded-bl-lg">
+          <div className="flex gap-2 px-2 py-1 bg-gradient-to-b from-green-900/90 to-green-800/70 rounded-bl-lg">
             <button
               onClick={() => setShowInfo(!showInfo)}
               className="text-yellow-500 hover:scale-140 px-1 transition-transform"
@@ -238,7 +237,7 @@ const GamePlayer: React.FC<GamePlayerProps> = ({
                 animate={{ opacity: 1, y: 0, scaleY: 1 }}
                 exit={{ opacity: 0, y: -20, scaleY: 0.8 }}
                 transition={{ duration: 0.2, ease: "easeOut" }}
-                className="bg-[#3b2c1a]/95 text-yellow-100 text-xl p-3 rounded-bl-xl w-70 shadow-lg border border-yellow-700 origin-top flex flex-col"
+                className="bg-green-900/90 text-yellow-100 text-xl p-3 rounded-bl-xl w-70 shadow-lg border border-yellow-700 origin-top flex flex-col"
               >
                 <div className="flex justify-between p-1">
                   <span>房间：</span>
@@ -368,7 +367,6 @@ const GamePlayer: React.FC<GamePlayerProps> = ({
         open={openSettings}
         onClose={() => setOpenSettings(false)}
       />
-
     </div>
   );
 };

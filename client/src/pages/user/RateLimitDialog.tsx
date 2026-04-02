@@ -16,8 +16,7 @@ interface RateLimitDialogProps {
   inline?: boolean;
 }
 
-const GRID_BG = "#291717";
-const BORDER_COLOR = "#57412d";
+const BORDER_COLOR = "#f3f4f7";
 
 /**
  * Dialog showing result rate limits (限红): grid of bet types with min-max ranges.
@@ -77,20 +76,19 @@ const RateLimitDialog: React.FC<RateLimitDialogProps> = ({
 
   const panelContent = (
     <div
-      className="overflow-hidden rounded-lg border w-100 max-w-[25rem]"
+      className="overflow-hidden rounded-lg bg-green-900/90 border w-100 max-w-[25rem]"
       style={{
-        backgroundColor: GRID_BG,
         borderColor: BORDER_COLOR,
       }}
     >
-      <div style={{ backgroundColor: GRID_BG }}>
+      <div>
         <div className="grid grid-cols-3 border-collapse">
           {gridCells.map((row, i) => (
             <div
               key={i}
               className={cn(
                 "flex flex-col items-center justify-center py-3 px-2 min-h-[52px]",
-                i < GRID_SIZE - 3 && "border-b border-b-3",
+                i < GRID_SIZE - 3 && "border-b-3",
               )}
               style={{
                 borderColor: BORDER_COLOR,
@@ -148,7 +146,6 @@ const RateLimitDialog: React.FC<RateLimitDialogProps> = ({
       <DialogContent
         className="p-0 gap-0 overflow-hidden rounded-lg border max-w-sm w-[min(90vw,22rem)]"
         style={{
-          backgroundColor: GRID_BG,
           borderColor: BORDER_COLOR,
         }}
         overlayClassName="bg-black/60"

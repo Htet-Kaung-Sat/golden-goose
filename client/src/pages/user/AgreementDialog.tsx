@@ -20,7 +20,7 @@ const AgreementDialog: React.FC<AgreementDialogProps> = ({ open, onClose }) => {
           overflow-hidden
           relative
           border border-yellow-600/30
-          bg-[#5a3f2a]
+          bg-green-900
         "
       >
         <button

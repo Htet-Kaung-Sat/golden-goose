@@ -18,7 +18,7 @@ const NiuNiuRoad: React.FC<NiuNiuRoadProps> = ({
   return (
     <>
       {page === "game" && (
-        <div className="flex flex-col bg-[#3a2f1d] text-white text-center font-bold min-w-[155px]">
+        <div className="flex flex-col bg-gray-900 text-white text-center font-bold min-w-[155px]">
           <div className="flex items-center justify-between px-2 gap-5 py-1 border-none">
             <span className="text-sky-300 text-4xl">闲1</span>
             <span className="text-white text-4xl">{winCount?.player1}</span>

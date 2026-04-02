@@ -60,7 +60,7 @@ const Navbar = () => {
     <>
       <header
         className={cn(
-          "fixed top-0 left-0 right-0 z-40 bg-[#332d2b] text-white flex items-center gap-4 px-4",
+          "fixed top-0 left-0 right-0 z-40 bg-green-900 text-white flex items-center gap-4 px-4",
           "transition-[left] duration-400 ease-in-out",
           isSidebarOpen ? leftClassOpen : leftClassClose,
           "h-16 border-b-0 md:border-b-4 md:border-b-[#ae854d]",
@@ -105,7 +105,7 @@ const Navbar = () => {
             <Button
               onClick={() => setOpen((prev) => !prev)}
               className={cn(
-                `flex items-center gap-2 text-white bg-[#388a95] p-1.5 rounded-sm hover:bg-[#29666e]`,
+                `flex items-center gap-2 text-primary bg-yellow-500 p-1.5 rounded-sm hover:bg-yellow-600`,
               )}
             >
               <Icons.user size={20} />
@@ -126,7 +126,7 @@ const Navbar = () => {
                 ref={popupRef}
                 className={cn(
                   `absolute top-full right-0 mt-1 ${popUpWidth}`,
-                  "bg-[#29666e] shadow z-50 rounded-md",
+                  "bg-yellow-500 shadow z-50 rounded-md",
                 )}
               >
                 <Button
@@ -134,7 +134,7 @@ const Navbar = () => {
                     navigate("/admin/change_password");
                     setOpen(false);
                   }}
-                  className="w-full px-4 py-3 rounded-b-none text-left bg-[#29666e] hover:bg-[#388a95]"
+                  className="w-full px-4 py-3 rounded-b text-primary text-left bg-yellow-500 hover:bg-yellow-600"
                 >
                   {t("change_password")}
                 </Button>
@@ -144,7 +144,7 @@ const Navbar = () => {
                     handleLogout();
                     setOpen(false);
                   }}
-                  className="w-full px-4 py-3 rounded-t-none text-left bg-[#29666e] hover:bg-[#388a95]"
+                  className="w-full px-4 py-3 rounded-t-none text-primary text-left bg-yellow-500 hover:bg-yellow-600"
                 >
                   {t("sign_out")}
                 </Button>
@@ -154,7 +154,7 @@ const Navbar = () => {
         </div>
       </header>
 
-      <div className="sm:hidden sticky w-full top-14 z-30 bg-[#332d2b] text-white flex items-center px-8 h-14 border-b-4 border-b-[#ae854d]">
+      <div className="sm:hidden sticky w-full top-14 z-30 bg-green-900 text-white flex items-center px-8 h-14 border-b-4 border-b-[#ae854d]">
         <div className="flex flex-1 items-center justify-between gap-10">
           <div className="flex flex-col text-sm">
             <span>{t("balance")}</span>
