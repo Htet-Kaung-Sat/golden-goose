@@ -19,7 +19,7 @@ const ChunkLoadError: React.FC<ChunkLoadErrorProps> = () => {
     <div
       className={cn(
         "relative flex flex-col items-center justify-center",
-        "min-h-screen bg-[var(--main-color)] text-white text-center p-6",
+        "min-h-screen bg-green-700 text-white text-center p-6",
       )}
     >
       <div className="space-y-6 max-w-md">
