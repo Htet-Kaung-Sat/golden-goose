@@ -81,9 +81,9 @@ const ConfirmDialog = ({
   };
   return (
     <Dialog open={open} onOpenChange={onClose}>
-      <DialogContent className="bg-[#3a332f] text-white border-3 border-[#e3c67d] rounded-xl shadow-xl p-0 max-w-sm overflow-hidden">
-        <DialogHeader className="bg-black/30 py-4 text-center items-center border-b border-[#e3c67d]">
-          <DialogTitle className="text-[#e3c67d] text-lg">
+      <DialogContent className="bg-green-700 text-white border-3 border-yellow-500 rounded-xl shadow-xl p-0 max-w-sm overflow-hidden">
+        <DialogHeader className="bg-primary/40 py-4 text-center items-center border-b border-yellow-500">
+          <DialogTitle className="text-[#e3c67d] text-2xl font-bold">
             {getTitle()}
           </DialogTitle>
           <DialogDescription className="sr-only">{message}</DialogDescription>

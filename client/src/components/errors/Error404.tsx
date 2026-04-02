@@ -28,13 +28,17 @@ const Error404: React.FC<Error404Props> = ({ redirectTo = "/" }) => {
     <div
       className={cn(
         "relative flex flex-col items-center justify-center",
-        "min-h-screen bg-[var(--main-color)] text-white text-center p-6",
+        "min-h-screen bg-green-700 text-white text-center p-6",
       )}
     >
       <img
-        src="/images/astronaut.png"
-        alt="Error404"
-        className="absolute top-4 right-4 w-60 h-auto"
+        aria-hidden
+        src="/images/astro.png"
+        alt=""
+        className={cn(
+          "absolute top-8 right-8 z-0 block h-auto w-60",
+          "animate-error404-float-wave",
+        )}
       />
       <div className="space-y-4">
         <div className="relative z-10 space-y-4">

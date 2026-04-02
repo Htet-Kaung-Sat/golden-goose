@@ -204,3 +204,30 @@ a[data-slot="tabs-trigger"][aria-selected="false"] {
   border-color: #eecf21 !important;
   box-shadow: 0 0 30px rgba(249, 228, 183, 0.6);
 }
+
+@keyframes error404-float-wave {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-3deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(5deg);
+  }
+  50% {
+    transform: translateY(-18px) rotate(-4deg);
+  }
+  75% {
+    transform: translateY(-8px) rotate(4deg);
+  }
+}
+
+.animate-error404-float-wave {
+  transform-origin: 50% 88%;
+  animation: error404-float-wave 3.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-error404-float-wave {
+    animation: none;
+  }
+}
