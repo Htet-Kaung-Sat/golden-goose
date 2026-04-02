@@ -431,7 +431,7 @@ const Home = () => {
               <div className="bg-green-900/90 flex flex-col gap-3 w-[200px] shrink-0">
                 <div className="flex items-center justify-center">
                   <img
-                    src="/images/logo.png"
+                    src="/images/gg-logo.png"
                     alt="card-grid"
                     className="w-35 object-contain mt-2"
                   />

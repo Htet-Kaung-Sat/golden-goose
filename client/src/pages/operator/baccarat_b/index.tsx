@@ -312,7 +312,7 @@ const Index = () => {
 
             <div className="relative z-10 flex flex-col items-center justify-center h-full">
               <img
-                src="/images/logo.png"
+                src="/images/gg-logo.png"
                 alt="Logo"
                 className="w-50 rounded-full mb-4"
               />

@@ -85,7 +85,7 @@ const Login = () => {
 
       <div className="relative flex flex-col gap-4 md:gap-5 lg:gap-2 z-10 w-full max-w-lg text-center">
         <img
-          src="/images/logo.png"
+          src="/images/gg-logo.png"
           alt="Logo"
           className="w-48 mx-auto mb-4 rounded-full"
         />

@@ -80,7 +80,7 @@ const Login = () => {
       {!errorDialogOpen && !successDialogOpen && (
         <div className="w-full max-w-lg relative z-10">
           <img
-            src="/images/logo.png"
+            src="/images/gg-logo.png"
             alt="Logo"
             className="w-48 mx-auto mb-4 rounded-full"
           />

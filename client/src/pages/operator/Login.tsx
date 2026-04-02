@@ -43,7 +43,7 @@ const Login = () => {
       <Card className="w-full max-w-sm sm:mx-4 mx-2 shadow-xl rounded-2xl relative z-10">
         <CardContent className="px-6 py-3">
           <div className="flex justify-center">
-            <img src="/images/logo.png" alt="Logo" className="w-32" />
+            <img src="/images/gg-logo.png" alt="Logo" className="w-32" />
           </div>
           <span className="w-full block mb-6 text-4xl font-bold text-center text-primary">
             新金鹅
