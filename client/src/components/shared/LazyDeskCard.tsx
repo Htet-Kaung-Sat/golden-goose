@@ -32,7 +32,7 @@ export function LazyDeskCard({
           if (entry.isIntersecting) setIsInView(true);
         });
       },
-      { rootMargin: "100px", threshold: 0 }
+      { rootMargin: "100px", threshold: 0 },
     );
     observer.observe(el);
     return () => observer.disconnect();
@@ -43,10 +43,10 @@ export function LazyDeskCard({
       <Card
         onClick={onSelect}
         className={cn(
-          "bg-[#4a362a] rounded-sm border border-gray-600 text-white py-0 gap-0 cursor-pointer overflow-hidden",
+          "bg-gray-800 rounded-sm border border-gray-600 text-white py-0 gap-0 cursor-pointer overflow-hidden",
           "transition-all duration-300 ease-out group",
           "hover:scale-[1.02] hover:border-yellow-500/50 hover:shadow-[0_0_20px_rgba(210,155,36,0.2)]",
-          cardClassName
+          cardClassName,
         )}
       >
         {desk.game && isInView ? (

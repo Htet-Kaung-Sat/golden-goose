@@ -295,7 +295,7 @@ const StatsDisplay: React.FC<{
 }> = (props) => {
   if (props.game === "LONGHU") {
     return (
-      <div className="flex flex-col bg-[#3a2f1d] text-white border-0 text-center font-bold text-4xl min-w-[200px] shrink-0">
+      <div className="flex flex-col bg-gray-900 text-white border-0 text-center font-bold text-4xl min-w-[200px] shrink-0">
         <div className="flex items-center justify-between px-2 py-1 border-none">
           <span className="text-red-500">龙</span>
           <span>{props.bankerCount}</span>
@@ -316,7 +316,7 @@ const StatsDisplay: React.FC<{
     );
   }
   return (
-    <div className="flex flex-col bg-[#3a2f1d] text-white border-0 text-center font-bold text-4xl min-w-[200px] shrink-0">
+    <div className="flex flex-col bg-gray-900 text-white border-0 text-center font-bold text-4xl min-w-[200px] shrink-0">
       <div className="flex items-center justify-between px-2 py-1 border-none">
         <span className="text-red-500">庄</span>
         <span>{props.bankerCount}</span>
@@ -344,7 +344,7 @@ const CardFooterStats: React.FC<{
 }> = ({ results, game_type, winCount }) => {
   if (game_type === "NIUNIU") {
     return (
-      <div className="flex flex-row  bg-[#3a2f1d] text-white text-center font-bold text-xl w-full">
+      <div className="flex flex-row  bg-gray-900 text-white text-center font-bold text-xl w-full">
         <div className="flex items-center gap-2 justify-between px-4 py-2 border-none">
           <span className="text-[#01fae6] text-2xl">闲1</span>
           <span className="text-white text-xl">{winCount?.player1}</span>
@@ -383,7 +383,7 @@ const CardFooterStats: React.FC<{
     const longhuTotalCount = dragonCount + tigerCount + longhuTieCount;
 
     return (
-      <div className="flex flex-row bg-[#3a2f1d] text-white text-center font-bold text-xl w-full">
+      <div className="flex flex-row bg-gray-900 text-white text-center font-bold text-xl w-full">
         <div className="flex items-center gap-2 justify-between px-4 py-2 border-none">
           <span className="text-red-500 text-2xl">龙</span>
           <span className="text-white text-xl">{dragonCount}</span>
@@ -412,7 +412,7 @@ const CardFooterStats: React.FC<{
     results?.filter((r) => r.key.split("|").includes("tie")).length || 0;
   const totalCount = bankerCount + playerCount + tieCount;
   return (
-    <div className="flex flex-row bg-[#3a2f1d] text-white text-center font-bold text-xl w-full">
+    <div className="flex flex-row bg-gray-900 text-white text-center font-bold text-xl w-full">
       <div className="flex items-center gap-2 justify-between px-4 py-2 border-none">
         <span className="text-red-500 text-2xl">庄</span>
         <span className="text-white text-xl">{bankerCount}</span>
@@ -534,7 +534,7 @@ const GoodRoadPanel: React.FC = () => {
   const { goodRoads } = useGameContext();
 
   return (
-    <div className="w-[465px] bg-[#3a2f1d] flex flex-col">
+    <div className="w-[465px] bg-gray-900 flex flex-col">
       <div className="text-white text-xl text-center border-b border-white/20 font-bold shrink-0">
         好路提醒
       </div>

@@ -350,15 +350,15 @@ const HelpDialog: React.FC<HelpDialogProps> = ({ open, onClose }) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70">
-      <div className="w-2/3 h-2/3 bg-[#f7f1e6] rounded-lg overflow-hidden shadow-xl flex flex-col">
-        <div className="flex items-center bg-[#efe2cc] text-[#6b4a2d] text-3xl px-4">
+      <div className="w-2/3 h-2/3 bg-primary rounded-lg overflow-hidden shadow-xl flex flex-col">
+        <div className="flex items-center bg-green-700 text-white text-3xl px-4">
           {HELP_TABS.map((tab) => (
             <div
               key={tab.key}
               onClick={() => setActiveTab(tab.key)}
               className={`px-6 py-4 cursor-pointer transition ${
                 activeTab === tab.key
-                  ? "border-b-4 border-[#6b4a2d] font-semibold"
+                  ? "border-b-4 border-yellow-500 bg-[#b6aea7] font-semibold"
                   : "opacity-70 hover:opacity-100"
               }`}
             >
@@ -373,12 +373,12 @@ const HelpDialog: React.FC<HelpDialogProps> = ({ open, onClose }) => {
             <Icon
               icon="material-symbols:close-rounded"
               width="50"
-              className="cursor-pointer"
+              className="cursor-pointer text-yellow-500"
             />
           </button>
         </div>
 
-        <div className="p-10 text-xl text-[#6b4a2d] overflow-y-auto flex-1 scrollbar-hide">
+        <div className="p-10 text-xl text-white/80 overflow-y-auto flex-1 scrollbar-hide">
           {activeTab === "baccarat" && (
             <>
               {BACCARAT_SECTIONS.map((section) => (
@@ -459,9 +459,9 @@ const AccordionItem = ({
     <div className="mb-4">
       <div
         onClick={() => setOpen(!open)}
-        className="flex items-center justify-between bg-[#ecd3ad] px-6 py-2 cursor-pointer rounded"
+        className="flex items-center justify-between bg-gray-500 px-6 py-3 cursor-pointer rounded"
       >
-        <div className="flex items-center gap-3 text-3xl font-semibold text-[#6b4a2d]">
+        <div className="flex items-center gap-3 text-3xl font-semibold text-white">
           <Icon icon="bi:suit-spade-fill" width="32" height="32" />
           {title}
         </div>
@@ -472,7 +472,7 @@ const AccordionItem = ({
       </div>
 
       {open && (
-        <div className="bg-[#fffaf1] font-medium px-6 py-4 text-2xl text-black  border border-[#e2c8a2] rounded-b leading-relaxed whitespace-pre-line mb-5">
+        <div className="bg-white font-medium px-6 py-4 text-2xl text-primary  border border-[#e2c8a2] rounded-b leading-relaxed whitespace-pre-line mb-5">
           {content}
         </div>
       )}

@@ -18,7 +18,7 @@ const NiuNiuRoad: React.FC<NiuNiuRoadProps> = ({
   return (
     <>
       {page === "game" && (
-        <div className="flex flex-col bg-[#3a2f1d] text-white text-center font-bold min-w-[155px]">
+        <div className="flex flex-col bg-gray-900 text-white text-center font-bold min-w-[155px]">
           <div className="flex items-center justify-between px-2 gap-5 py-1 border-none">
             <span className="text-sky-300 text-4xl">闲1</span>
             <span className="text-white text-4xl">{winCount?.player1}</span>
@@ -55,7 +55,7 @@ const NiuNiuRoad: React.FC<NiuNiuRoadProps> = ({
               <div
                 className={cn(
                   "flex items-center justify-center bg-white font-bold aspect-square text-2xl",
-                  rowIndex === 0 ? "text-red-500" : "text-[#01fae6]"
+                  rowIndex === 0 ? "text-red-500" : "text-[#01fae6]",
                 )}
               >
                 {label}
@@ -68,7 +68,7 @@ const NiuNiuRoad: React.FC<NiuNiuRoadProps> = ({
 
                 const emptyCount = Math.max(
                   0,
-                  numOfCol - currentResults.length
+                  numOfCol - currentResults.length,
                 );
                 const filledResults = [
                   ...currentResults,
@@ -114,7 +114,7 @@ const NiuNiuRoad: React.FC<NiuNiuRoadProps> = ({
                         <div
                           className={cn(
                             "flex items-center justify-center rounded-full text-white font-bold transition-all w-10 h-10 text-xl",
-                            circleColor
+                            circleColor,
                           )}
                         >
                           {value}

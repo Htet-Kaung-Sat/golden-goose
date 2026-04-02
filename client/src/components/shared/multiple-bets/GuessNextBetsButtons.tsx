@@ -51,7 +51,7 @@ const GuessNextBetsButtons = ({
   return (
     <>
       {isGamePlayer ? (
-        <div className="min-w-[80px] grid grid-rows-2 bg-[#3a2f1d] text-white text-center p-1 gap-1">
+        <div className="min-w-[80px] grid grid-rows-2 bg-gray-900 text-white text-center p-1 gap-1">
           <div
             className={cn(
               "flex items-center justify-between border-none cursor-pointer ",

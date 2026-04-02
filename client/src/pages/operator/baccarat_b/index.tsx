@@ -307,7 +307,7 @@ const Index = () => {
           <div className="relative bg-cover bg-center h-224 overflow-hidden">
             <div
               className="absolute inset-0 bg-cover bg-center blur-sm"
-              style={{ backgroundImage: "url('/images/casino_bg.jpg')" }}
+              style={{ backgroundImage: "url('/images/goose.png')" }}
             />
 
             <div className="relative z-10 flex flex-col items-center justify-center h-full">
@@ -317,7 +317,7 @@ const Index = () => {
                 className="w-50 rounded-full mb-4"
               />
               <TypographyH1 className="text-yellow-200 text-4xl font-bold">
-                新金宝
+                新金鹅
               </TypographyH1>
             </div>
           </div>

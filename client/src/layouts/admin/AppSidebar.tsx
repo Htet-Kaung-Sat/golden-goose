@@ -229,7 +229,7 @@ export function AppSidebar() {
   return (
     <Sidebar className={`h-screen overflow-hidden ${!isEn ? "w-50" : "w-70"}`}>
       {/* HEADER */}
-      <SidebarHeader className="text-white admin-sidebar sticky top-0 z-10">
+      <SidebarHeader className="text-white admin-sidebar bg-primary sticky top-0 z-10">
         <div className="flex flex-col items-center">
           <div className="py-2 md:py-3">
             <NavLink
@@ -248,7 +248,7 @@ export function AppSidebar() {
       </SidebarHeader>
 
       {/* CONTENT */}
-      <SidebarContent className="text-white overflow-y-auto overflow-x-hidden">
+      <SidebarContent className="text-white bg-green-900 overflow-y-auto overflow-x-hidden">
         <SidebarGroupContent>
           <SidebarMenu className="py-3">
             {sidebarItems.map((item) => {

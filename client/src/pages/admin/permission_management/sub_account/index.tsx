@@ -98,9 +98,9 @@ const SubAccount = () => {
       cell: ({ row }) => {
         const isOnline = row.original.state == "online" ? true : false;
         return isOnline ? (
-          <p className="font-green font-medium">{t("saf_online")}</p>
+          <p className="text-emerald-500 font-medium">{t("saf_online")}</p>
         ) : (
-          <p className="font-red font-medium">{t("saf_offline")}</p>
+          <p className="text-red-500 font-medium">{t("saf_offline")}</p>
         );
       },
     },

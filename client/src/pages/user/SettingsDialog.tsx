@@ -37,8 +37,8 @@ const SettingsDialog: React.FC<SettingsDialogProps> = ({ open, onClose }) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70">
-      <div className="w-1/2 h-2/3 bg-[#3b2a1f] rounded-lg overflow-hidden border border-yellow-600/30">
-        <div className="flex items-center justify-between px-6 py-4 bg-[#5a3f2a]">
+      <div className="w-1/2 h-2/3 bg-green-900 rounded-lg overflow-hidden border border-yellow-600/30">
+        <div className="flex items-center justify-between px-6 py-4 bg-green-700">
           <div className="text-5xl text-white font-semibold">声音偏好</div>
           <button
             onClick={onClose}
@@ -67,7 +67,7 @@ const SettingsDialog: React.FC<SettingsDialogProps> = ({ open, onClose }) => {
             <Select value={musicType} onValueChange={setMusicType}>
               <SelectTrigger
                 className={cn(
-                  "bg-[#7a5535] border-none text-white w-full rounded-md",
+                  "bg-gray-300 border-none cursor-pointer text-black w-full rounded-md",
                   "h-14 text-lg py-2",
                   "md:text-xl md:py-2",
                   "lg:text-2xl lg:py-3",
@@ -98,7 +98,7 @@ const SettingsDialog: React.FC<SettingsDialogProps> = ({ open, onClose }) => {
             <Select value={voiceLang} onValueChange={setVoiceLang}>
               <SelectTrigger
                 className={cn(
-                  "bg-[#7a5535] border-none text-white w-full rounded-md",
+                  "bg-gray-300 border-none cursor-pointer text-black w-full rounded-md",
                   "h-14 text-lg py-2",
                   "md:text-xl md:py-2",
                   "lg:text-2xl lg:py-3",
@@ -146,7 +146,7 @@ const SettingSwitch = ({
     <div>{label}</div>
     <button
       onClick={() => onChange(!value)}
-      className={`w-[80px] h-[40px] rounded-md text-xl font-semibold transition
+      className={`w-[80px] h-[40px] rounded-md text-xl font-semibold cursor-pointer transition
         ${value ? "bg-green-500 text-black" : "bg-orange-500 text-white"}
       `}
     >

@@ -694,7 +694,7 @@ const Index = () => {
               <Button
                 onClick={startBetting}
                 disabled={status === "dealing" || status === "finished"}
-                className="bg-black text-white text-3xl py-10"
+                className="bg-primary text-white text-3xl py-10"
               >
                 {status === "betting" && `停止下注 (${timer})`}
                 {status === "dealing" && "停止下注"}
@@ -705,7 +705,7 @@ const Index = () => {
               <Button
                 onClick={() => setChangeDialogOpen(true)}
                 disabled={!(status === "active" || status === "finished")}
-                className="bg-black text-white text-3xl py-10"
+                className="bg-primary text-white text-3xl py-10"
               >
                 换靴
               </Button>

@@ -35,7 +35,7 @@ const VideoIframe: React.FC<{ src: string; isGamePlayer?: boolean }> = ({
       {loading && allowed && (
         <div
           className={cn(
-            "absolute inset-0 flex items-center justify-center bg-[url('/images/kinpo.png')] bg-center bg-cover",
+            "absolute inset-0 flex items-center justify-center bg-[url('/images/goose.png')] bg-center bg-cover",
             isGamePlayer ? "bg-[url('/images/casino_table.png')]" : "",
           )}
         >

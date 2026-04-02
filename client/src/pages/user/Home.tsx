@@ -330,11 +330,11 @@ const Home = () => {
           })()
         ) : (
           <>
-            <div className="bg-gradient-to-r from-[#3b2a1f] to-[#2c1f16] flex px-4 text-white shrink-0">
+            <div className="bg-gradient-to-b from-green-800/70 to-green-300/50 flex px-4 text-white shrink-0">
               <div className="flex items-center w-full gap-1 mb-4 mt-2">
                 <Icon icon="el:speaker" width="35" className="text-[#d29b24]" />
                 <div
-                  className="cursor-pointer flex-1 bg-gray-900 rounded-tl-lg rounded-l-lg ms-2 px-4 overflow-hidden flex items-center h-[50px]"
+                  className="cursor-pointer flex-1 bg-gray-900/70 rounded-lg ms-2 px-4 overflow-hidden flex items-center h-[50px]"
                   onClick={(e) => {
                     e.stopPropagation();
                     setPopupOpen(true);
@@ -348,22 +348,22 @@ const Home = () => {
                   </span>
                   {popupOpen && currentAnnounce && (
                     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
-                      <div className="bg-[#2b1d11] w-3/4 h-3/5 max-w-[95%] rounded-lg border border-[#3e2e1e] shadow-2xl p-8 relative animate-fadeIn overflow-hidden">
+                      <div className="bg-gradient-to-b from-green-800/90 to-green-300/70 w-3/4 h-3/5 max-w-[95%] rounded-lg border border-[#3e2e1e] shadow-2xl p-8 relative animate-fadeIn overflow-hidden">
                         <button
-                          className="absolute top-4 right-4 w-10 h-10 cursor-pointer flex items-center justify-center rounded-full border-2 border-[#8c7654] text-[#8c7654] opacity-70 hover:opacity-100 hover:scale-110 transition-opacity"
+                          className="absolute top-4 right-4 w-12 h-12 cursor-pointer flex items-center justify-center rounded-full border-2 border-[#d2e873] text-[#d2e873] opacity-70 hover:opacity-100 hover:scale-110 transition-opacity"
                           onClick={(e) => {
                             e.stopPropagation();
                             setPopupOpen(false);
                           }}
                         >
-                          <span className="text-3xl font-light leading-none">
+                          <span className="text-4xl font-bold text-yellow-500 leading-none">
                             ✕
                           </span>
                         </button>
-                        <h2 className="text-4xl font-bold mb-8 text-white text-center tracking-widest">
+                        <h2 className="text-4xl font-bold mb-8 text-yellow-500 text-center tracking-widest">
                           {currentAnnounce.title}
                         </h2>
-                        <div className="text-white text-3xl leading-relaxed text-justify overflow-y-auto overflow-x-hidden h-full px-2 break-words whitespace-pre-wrap">
+                        <div className="text-yellow-500 text-3xl leading-relaxed text-justify overflow-y-auto overflow-x-hidden h-full px-2 break-words whitespace-pre-wrap">
                           {currentAnnounce.content}
                         </div>
                       </div>
@@ -428,25 +428,35 @@ const Home = () => {
             </div>
 
             <div className="flex flex-1 overflow-hidden">
-              <div className="bg-[#2c1f16] flex flex-col gap-3 w-[200px] shrink-0">
+              <div className="bg-green-900/90 flex flex-col gap-3 w-[200px] shrink-0">
                 <div className="flex items-center justify-center">
                   <img
                     src="/images/logo.png"
                     alt="card-grid"
-                    className="w-35 object-contain"
+                    className="w-35 object-contain mt-2"
                   />
                 </div>
 
                 <div className="flex flex-col items-center gap-1 overflow-hidden w-full">
-                  <div className="flex items-center text-sm text-yellow-200 bg-gray-900 rounded-xl w-full py-1 px-3 gap-2 overflow-hidden">
-                    <Icon icon="ph:user-circle-fill" width="30" className="shrink-0" />
+                  <div className="flex items-center text-sm text-yellow-200 bg-white/20 rounded-xl w-full py-2 px-3 gap-2 overflow-hidden">
+                    <Icon
+                      icon="ph:user-circle-fill"
+                      width="30"
+                      className="shrink-0"
+                    />
                     <span className="text-2xl truncate min-w-0">
                       {user?.account}
                     </span>
                   </div>
-                  <div className="flex items-center text-sm text-yellow-200 bg-gray-900 rounded-xl w-full py-1 px-3 gap-2 overflow-hidden">
-                    <Icon icon="pepicons-pop:yen-circle-filled" width="26" className="shrink-0" />
-                    <span className="text-2xl truncate min-w-0">{user?.balance}</span>
+                  <div className="flex items-center text-sm text-yellow-200 bg-white/20 rounded-xl w-full py-2 px-3 gap-2 overflow-hidden">
+                    <Icon
+                      icon="pepicons-pop:yen-circle-filled"
+                      width="26"
+                      className="shrink-0"
+                    />
+                    <span className="text-2xl truncate min-w-0">
+                      {user?.balance}
+                    </span>
                   </div>
                 </div>
                 <div className="flex flex-col items-end me-3 gap-1 text-lg text-yellow-200">
@@ -514,10 +524,10 @@ const Home = () => {
                     }`}
                   >
                     {(g.name === "百家乐" || g.name === "龙虎斗") && (
-                      <span className="absolute -top-2 -right-1 bg-[#4d1909] rounded-full px-3.5 py-1 drop-shadow-lg border border-[#f3c960]/30">
+                      <span className="absolute -top-2 -right-1 bg-white rounded-full px-2 py-2 drop-shadow-lg border border-[#f3c960]/30">
                         <Icon
                           icon="mdi:thumb-up"
-                          className="text-[#f3c960] w-12 h-12"
+                          className="text-red-500 w-12 h-12"
                         />
                       </span>
                     )}
@@ -552,43 +562,46 @@ const Home = () => {
                 </Button>
               </div>
 
-              <div className="flex-1 bg-[#1e1611] overflow-x-auto overflow-y-hidden">
-                {isMultipleBet ? (
-                  <MultipleBet
-                    desks={desks}
-                    games={games}
-                    cameras={cameras}
-                    onExpandDesk={(desk) => {
-                      setSelectedDesk(desk);
-                      setIsMultipleBet(false);
-                    }}
-                  />
-                ) : (
-                  <ScrollArea className="h-full scrollbar-hide">
-                    <div className="px-5 py-2 grid grid-cols-2 gap-x-4 gap-y-4">
-                      {filteredDesks.map((desk) => (
-                        <Card
-                          key={desk.id}
-                          onClick={() => handleSelectDesk(desk)}
-                          className={cn(
-                            "bg-[#4a362a] rounded-sm border border-gray-600 text-white py-0 gap-0 cursor-pointer overflow-hidden",
-                            "transition-all duration-300 ease-out group",
-                            "hover:scale-[1.02] hover:border-yellow-500/50 hover:shadow-[0_0_20px_rgba(210,155,36,0.2)]",
-                          )}
-                        >
-                          <DeskCardTables desk={desk} compact={true} />
-                        </Card>
-                      ))}
-                    </div>
-                  </ScrollArea>
-                )}
+              <div className="flex-1 relative bg-[url('/images/goose.png')] bg-center bg-cover overflow-hidden">
+                <div className="absolute inset-0 bg-green-900/20 backdrop-blur-sm pointer-events-none z-0" />
+                <div className="relative z-10 h-full w-full overflow-x-auto overflow-y-hidden">
+                  {isMultipleBet ? (
+                    <MultipleBet
+                      desks={desks}
+                      games={games}
+                      cameras={cameras}
+                      onExpandDesk={(desk) => {
+                        setSelectedDesk(desk);
+                        setIsMultipleBet(false);
+                      }}
+                    />
+                  ) : (
+                    <ScrollArea className="h-full scrollbar-hide">
+                      <div className="px-5 py-2 grid grid-cols-2 gap-x-4 gap-y-4">
+                        {filteredDesks.map((desk) => (
+                          <Card
+                            key={desk.id}
+                            onClick={() => handleSelectDesk(desk)}
+                            className={cn(
+                              "bg-gray-800 rounded-sm border border-gray-600 text-white py-0 gap-0 cursor-pointer overflow-hidden",
+                              "transition-all duration-300 ease-out group",
+                              "hover:scale-[1.02] hover:border-yellow-500/50 hover:shadow-[0_0_20px_rgba(210,155,36,0.2)]",
+                            )}
+                          >
+                            <DeskCardTables desk={desk} compact={true} />
+                          </Card>
+                        ))}
+                      </div>
+                    </ScrollArea>
+                  )}
+                </div>
               </div>
 
               {/* CCTV Streaming */}
               {!isMultipleBet && (
-                <div className="w-[360px] bg-[#2c1f16] p-4 border-l border-white/5 shrink-0 overflow-hidden">
+                <div className="w-[360px] bg-green-900/90 p-4 border-l border-white/5 shrink-0 overflow-hidden">
                   <div className="flex flex-col gap-4">
-                    <div className="relative rounded-lg overflow-hidden border border-white/10 shadow-lg">
+                    <div className="relative rounded-lg overflow-hidden border-4 border-yellow-500 shadow-lg">
                       {homeCameraUrls.length > 0 ? (
                         <VideoIframe src={homeCameraUrls[cameraIndex]} />
                       ) : (
@@ -600,16 +613,16 @@ const Home = () => {
                       {homeCameraUrls.length > 1 && (
                         <button
                           onClick={handleSwapCamera}
-                          className="absolute bottom-0 left-0 text-yellow-400 px-3 py-1 bg-[#2c1f16] rounded-tr-lg cursor-pointer"
+                          className="absolute bottom-0 left-0 text-yellow-400 px-3 py-1 bg-primary rounded-tr-lg cursor-pointer"
                         >
                           <Icon icon="tdesign:swap" width="24" height="24" />
                         </button>
                       )}
                     </div>
-                    <div className="rounded-lg overflow-hidden border border-white/10 shadow-lg">
+                    <div className="rounded-lg overflow-hidden border-4 border-yellow-500 shadow-lg">
                       <img
-                        src="/images/kinpo.png"
-                        alt="kinpo"
+                        src="/images/goose.png"
+                        alt="golden goose"
                         className="w-full object-contain"
                       />
                     </div>
